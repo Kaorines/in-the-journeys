@@ -1,0 +1,79 @@
+name: 🐛 Bug report
+description: Something is broken, a crash, or something does not work as expected.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill in as much as you can, it helps a lot.
+        **One bug per report**, and please check that it has not already been reported.
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: In The Journeys version
+      description: Shown in the Mods menu or in the .jar file name.
+      placeholder: e.g. 1.4.0
+    validations:
+      required: true
+
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft and NeoForge version
+      placeholder: e.g. Minecraft 26.1.2 / NeoForge 26.1.2.95
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Singleplayer
+        - Multiplayer server
+        - Both
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the bug, and what you expected to happen instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: Step by step, how can we make the bug happen again?
+      placeholder: |
+        1. Equip ...
+        2. Right click on ...
+        3. ...
+    validations:
+      required: true
+
+  - type: input
+    id: logs
+    attributes:
+      label: Log or crash report
+      description: |
+        Very useful! Upload your `logs/latest.log` (or the file in `crash-reports/` if the game crashed) to https://mclo.gs and paste the link here.
+      placeholder: https://mclo.gs/...
+
+  - type: textarea
+    id: modlist
+    attributes:
+      label: Other mods installed
+      description: The modpack name, or the list of other mods (especially if you think one of them is involved).
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or videos
+      description: Drag and drop images or videos here if they help.
